@@ -3,7 +3,7 @@ import os
 import tensorflow as tf
 import urllib.request
 import urllib.request
-@st.experimental_singleton
+
 def load_model():
     if not os.path.isfile('model.h5'):
         urllib.request.urlretrieve('https://github.com/SakritUser123/E-COLI-AI-Detector/edit/main/testheal.py', 'cal.h5')
