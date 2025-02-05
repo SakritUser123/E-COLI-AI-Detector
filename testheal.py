@@ -8,7 +8,7 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.utils import to_categorical
 import kagglehub
 # Download latest version
-! pip install opendatasets
+
 import opendatasets as od
 od.download("https://www.kaggle.com/datasets/avk256/cnmc-leukemia")
 import os
