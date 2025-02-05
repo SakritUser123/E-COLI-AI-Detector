@@ -1,9 +1,9 @@
 import streamlit as st
 import os
 if os.path.exists('codes/cal.h5'):
-    print("File found!")
+    st.write("File found!")
 else:
-    print("File not found!")
+    st.write("File not found!")
 # Set up the Streamlit page
 st.title('E. coli Risk Prediction Form')
 
