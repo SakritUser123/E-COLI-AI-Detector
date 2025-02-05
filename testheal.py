@@ -81,7 +81,7 @@ import numpy as np
 from PIL import Image
 import os
 
-model = tf.keras.models.load_model('/home/vscode/workspaces/E-COLI-AI-Detector/codes/cal.h5')
+model = tf.keras.models.load_model('cal.keras')
 
 st.write("Model loaded successfully!")
 st.title("Cancer Detection Model")
