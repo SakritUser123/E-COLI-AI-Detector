@@ -76,7 +76,7 @@ import cv2
 import numpy as np
 from PIL import Image
     
-model = tf.keras.models.load_model('/workspaces/E-COLI-AI-Detector/codes/cancer.h5')
+model = tf.keras.models.load_model('cancer.h5')
 st.write("Model loaded successfully!")
 st.title("Cancer Detection Model")
     
