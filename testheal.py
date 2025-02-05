@@ -7,7 +7,8 @@ import streamlit as st
 def load_model():
     if not os.path.isfile('model.h5'):
         urllib.request.urlretrieve('https://github.com/SakritUser123/E-COLI-AI-Detector/edit/main/testheal.py', 'cal.h5')
-    return tensorflow.keras.models.load_model('cal.h5')
+        model = tensorflow.keras.models.load_model('cal.h5')
+        return 'good'
 
 # Create the form
 with st.form(key='my_form'):
