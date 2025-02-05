@@ -1,9 +1,9 @@
 import pandas as pd
 import os 
 import tensorflow as tf
-model_path = 'codes/cal.hdf5'
-model = tf.keras.models.load_model(model_path)
-
+model_url ='https://github.com/SakritUser123/E-COLI-AI-Detector/blob/91d34f3a7b65ac2292e68358c63a2aef2bb9b7df/codes/cal.hdf5'
+urllib.request.urlretrieve(model_url, "cal.h5")
+model = tf.keras.models.load_model("cal.h5")
 # Create the form
 with st.form(key='my_form'):
     # Add inputs to the form
