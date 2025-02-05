@@ -70,3 +70,48 @@ if submit_button:
         result_placeholder.write("You are pregnant, which increases your risk of E. coli.")
     
     result_placeholder.write(f"Your calculated risk of contracting E. coli is **{risk}%** higher than the average population.")
+import streamlit as st
+import tensorflow as tf
+import cv2
+import numpy as np
+from PIL import Image
+    
+model = tf.keras.models.load_model('cancer.h5')
+st.write("Model loaded successfully!")
+st.title("Cancer Detection Model")
+    
+
+# File uploader to upload images
+uploaded_file = st.file_uploader("Choose an image...")
+    
+if "uploaded_file" not in st.session_state:
+    st.session_state.uploaded_file = None
+if uploaded_file is not None:
+    st.session_state.uploaded_file = uploaded_file
+if st.session_state.uploaded_file:     
+        
+    image = Image.open(uploaded_file)
+    image_np = np.array(image)
+    st.session_state.image_np = image_np
+    st.image(image, caption="Uploaded Image", use_column_width=True)
+if st.session_state.uploaded_file:    
+    IMG_SIZE = (150, 150)
+    image = np.array(image)
+
+    new = cv2.resize(image,IMG_SIZE)
+    print(f"Resized image shape: {new.shape}")  
+
+    img_normalized = new.astype('float32') / 255.0
+
+    img_normalized = np.expand_dims(img_normalized, axis=0)
+    prediction = model.predict(img_normalized)
+    # Call the prediction function and display result
+
+    st.write(f"Raw Prediction Output: {prediction}")
+    
+    if prediction >= 0.50:
+        
+        st.write("It is more  likely to be cancer")
+    else:
+        st.write("It is less likely to be cancer")
+
