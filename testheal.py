@@ -1,5 +1,9 @@
 import streamlit as st
 
+if os.path.exists('codes/cal.h5'):
+    print("File found!")
+else:
+    print("File not found!")
 # Set up the Streamlit page
 st.title('E. coli Risk Prediction Form')
 
@@ -77,11 +81,7 @@ import numpy as np
 from PIL import Image
 import os
 
-if os.path.exists('codes/cal.h5'):
-    print("File found!")
-else:
-    print("File not found!")
-model = tf.keras.models.load_model('codes/cal.h5')
+# model = tf.keras.models.load_model('codes/cal.h5')
 st.write("Model loaded successfully!")
 st.title("Cancer Detection Model")
     
