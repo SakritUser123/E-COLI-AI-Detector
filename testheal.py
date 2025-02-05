@@ -10,6 +10,7 @@ def load_model():
     return tensorflow.keras.models.load_model('cal.h5')
 # Create the form
 with st.form(key='my_form'):
+    risk = 0
     # Add inputs to the form
     name = st.text_input('Enter your name:')
     age = st.number_input('Enter your age:', min_value=0)
