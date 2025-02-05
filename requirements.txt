@@ -3,3 +3,4 @@ tensorflow
 opencv-python-headless
 h5py
 requests
+os
