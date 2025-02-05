@@ -8,6 +8,7 @@ def load_model():
     if not os.path.isfile('model.h5'):
         urllib.request.urlretrieve('https://github.com/SakritUser123/E-COLI-AI-Detector/edit/main/testheal.py', 'cal.h5')
     return tensorflow.keras.models.load_model('cal.h5')
+
 # Create the form
 with st.form(key='my_form'):
     risk = 0
@@ -79,7 +80,7 @@ import cv2
 import numpy as np
 from PIL import Image
 import os
-
+load_model()
 st.write("Model loaded successfully!")
 st.title("Cancer Detection Model")
     
