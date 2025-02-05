@@ -2,10 +2,12 @@ import pandas as pd
 import os 
 import tensorflow as tf
 import urllib.request
-
-model_url ='https://github.com/SakritUser123/E-COLI-AI-Detector/blob/91d34f3a7b65ac2292e68358c63a2aef2bb9b7df/codes/cal.hdf5'
-urllib.request.urlretrieve(model_url, "cal.h5")
-model = tf.keras.models.load_model("cal.h5")
+import urllib.request
+@st.experimental_singleton
+def load_model():
+    if not os.path.isfile('model.h5'):
+        urllib.request.urlretrieve('https://github.com/SakritUser123/E-COLI-AI-Detector/edit/main/testheal.py', 'cal.h5')
+    return tensorflow.keras.models.load_model('cal.h5')
 # Create the form
 with st.form(key='my_form'):
     # Add inputs to the form
