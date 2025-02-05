@@ -81,7 +81,7 @@ import numpy as np
 from PIL import Image
 import os
 
-# model = tf.keras.models.load_model('codes/cal.h5')
+model = 'codes/cal.h5'
 st.write("Model loaded successfully!")
 st.title("Cancer Detection Model")
     
