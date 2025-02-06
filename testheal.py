@@ -4,13 +4,7 @@ import tensorflow as tf
 import urllib.request
 import urllib.request
 import streamlit as st
-def load_model():
-    if not os.path.isfile('model.h5'):
-        urllib.request.urlretrieve('https://github.com/SakritUser123/E-COLI-AI-Detector/edit/main/testheal.py', 'cal.h5')
-        model = tf.keras.models.load_model('cal.h5')
-        return 'good'
 
-# Create the form
 with st.form(key='my_form'):
     risk = 0
     # Add inputs to the form
@@ -81,7 +75,7 @@ import cv2
 import numpy as np
 from PIL import Image
 import os
-load_model()
+model = tf.keras.models.load_model('cal.h5')
 st.write("Model loaded successfully!")
 st.title("Cancer Detection Model")
     
