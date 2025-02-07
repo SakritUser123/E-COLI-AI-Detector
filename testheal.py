@@ -5,6 +5,9 @@ import urllib.request
 import urllib.request
 import streamlit as st
 
+if st.button("Donate Now"):
+    st.markdown("[Click here to donate](https://buy.stripe.com/test_bIY14r79x1j9bhmfYY)")
+st.title('E COLI DETECTOR')
 with st.form(key='my_form'):
     risk = 0
     # Add inputs to the form
