@@ -5,7 +5,7 @@ import urllib.request
 import urllib.request
 import streamlit as st
 st.sidebar.title("Models")
-tabs = ["Home","E.Coli Detection","Cancer Detection"]
+tabs = ["Home","E.Coli Detection","Cancer Detection","Broken Bones AI Detector"]
 selected_tab = st.sidebar.radio("Select A Model",tabs)
 
 if selected_tab == "Home":
@@ -20,7 +20,8 @@ if selected_tab == "Home":
 Contact: [veerendrasakthi.prabhurajan@gmail.com]  
 GitHub: [The repository for this website!](https://github.com/SakritUser123/E-COLI-AI-Detector)
 """)
-    
+if selected_tab == "Broken Bones AI Detector":
+    st.title("Broken Bones AI Detection")
 if selected_tab == "E.Coli Detection":
     st.title("E-Coli AI Detector")
     with st.form(key='my_form'):
