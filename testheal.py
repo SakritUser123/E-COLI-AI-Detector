@@ -13,8 +13,8 @@ if selected_tab == "Home":
     st.write("Use The navigation bar to navigate the various models on the website!")
     
 
-    st.write("Click below to pay with PayPal:")
-    if st.button("Pay Now"):
+    st.write("Click below to donate with PayPal:")
+    if st.button("Donate"):
         st.markdown('[Click here to pay](https://www.paypal.me/KavithaKesavalu)', unsafe_allow_html=True)
 
 
