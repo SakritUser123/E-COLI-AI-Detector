@@ -11,9 +11,13 @@ selected_tab = st.sidebar.radio("Select A Model",tabs)
 if selected_tab == "Home":
     st.title("Home Page")
     st.write("Use The navigation bar to navigate the various models on the website!")
-    if st.button("Donate Now"):
+    
 
-        st.markdown("[Click here to donate](https://buy.stripe.com/test_bIY14r79x1j9bhmfYY)")
+    st.write("Click below to pay with PayPal:")
+    if st.button("Pay Now"):
+        st.markdown('[Click here to pay](https://www.paypal.me/KavithaKesavalu)', unsafe_allow_html=True)
+
+
     st.write("You can donate to this website it will help out a lot!")
     st.markdown("""
 ---
