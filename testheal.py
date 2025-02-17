@@ -6,9 +6,6 @@ import urllib.request
 import streamlit as st
 import streamlit as st  
 import time
-
-
-
 st.sidebar.title("Models")
 tabs = ["Home","E.Coli Detection","Cancer Detection","Broken Bones AI Detector"]
 selected_tab = st.sidebar.radio("Select A Model",tabs)
