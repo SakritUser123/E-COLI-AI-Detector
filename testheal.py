@@ -28,6 +28,7 @@ GitHub: [The repository for this website!](https://github.com/SakritUser123/E-CO
 """)
 if selected_tab == "Info":
     st.title("Info About This Website")
+    st.write("This website is a website for various healthcare models that help with diagnosing various medical conditions.")
 if selected_tab == "Broken Bones AI Detector":
     st.title("Broken Bones AI Detection")
 if selected_tab == "E.Coli Detection":
