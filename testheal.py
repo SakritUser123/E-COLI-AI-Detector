@@ -106,11 +106,8 @@ if selected_tab == 'Cancer Detection':
     import numpy as np
     from PIL import Image
     import os
-    if not st.session_state.logo_shown:
-        gif = 'https://cdn.dribbble.com/userupload/21168886/file/original-ee007c0e0a93e35e3a52c2ea3c330a21.gif'
-        image_placeholder = st.empty()
-        image_placeholder.image(gif, width = 5000)
-        model = tf.keras.models.load_model('cal.h5')
+
+    model = tf.keras.models.load_model('cal.h5')
     st.write("Model loaded successfully!")
     st.title("Cancer Detection Model")
     
