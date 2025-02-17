@@ -4,10 +4,26 @@ import tensorflow as tf
 import urllib.request
 import urllib.request
 import streamlit as st
+import streamlit as st  
+import time
+if 'logo_shown' not in st.session_state:
+    st.session_state.logo_shown = False
+if not st.session_state.logo_shown:
+    gif = 'https://cdn.dribbble.com/userupload/21168886/file/original-ee007c0e0a93e35e3a52c2ea3c330a21.gif'
+    image_placeholder = st.empty()
+    image_placeholder.image(gif, width = 5000)
+
+
+
+time.sleep(4) 
+image_placeholder.empty()
 st.sidebar.title("Models")
 tabs = ["Home","E.Coli Detection","Cancer Detection","Broken Bones AI Detector"]
 selected_tab = st.sidebar.radio("Select A Model",tabs)
-
+if not st.session_state.logo_shown:
+    gif = 'https://cdn.dribbble.com/userupload/21168886/file/original-ee007c0e0a93e35e3a52c2ea3c330a21.gif'
+    image_placeholder = st.empty()
+    image_placeholder.image(gif, width = 5000)
 if selected_tab == "Home":
     st.title("Home Page")
     st.write("Use The navigation bar to navigate the various models on the website!")
@@ -33,7 +49,7 @@ if selected_tab == "E.Coli Detection":
         # Add inputs to the form
         name = st.text_input('Enter your name:')
         age = st.number_input('Enter your age:', min_value=0)
-        gender = st.selectbox('Select your gender:', ['Male', 'Female'])
+        gender = st.selectbox('Select your gender:', ['Male', 'Female', 'Other'])
     
     # Additional factors based on age and gender
         if age > 25 and gender == 'Female':
@@ -101,7 +117,11 @@ if selected_tab == 'Cancer Detection':
     import numpy as np
     from PIL import Image
     import os
-    model = tf.keras.models.load_model('cal.h5')
+    if not st.session_state.logo_shown:
+        gif = 'https://cdn.dribbble.com/userupload/21168886/file/original-ee007c0e0a93e35e3a52c2ea3c330a21.gif'
+        image_placeholder = st.empty()
+        image_placeholder.image(gif, width = 5000)
+        model = tf.keras.models.load_model('cal.h5')
     st.write("Model loaded successfully!")
     st.title("Cancer Detection Model")
     
