@@ -7,7 +7,7 @@ import streamlit as st
 import streamlit as st  
 import time
 st.sidebar.title("Models")
-tabs = ["Home","E.Coli Detection","Cancer Detection","Broken Bones AI Detector","Info"]
+tabs = ["Home","E.Coli Detection","Cancer Detection","Blood test Analyzer","Info"]
 selected_tab = st.sidebar.radio("Select A Model",tabs)
 
 if selected_tab == "Home":
@@ -29,7 +29,7 @@ GitHub: [The repository for this website!](https://github.com/SakritUser123/E-CO
 if selected_tab == "Info":
     st.title("Info About This Website")
     st.write("This website is a website for various healthcare models that help with diagnosing various medical conditions.")
-if selected_tab == "Broken Bones AI Detector":
+if selected_tab == "Blood test analyzer":
     st.title("Broken Bones AI Detection")
 if selected_tab == "E.Coli Detection":
     st.title("E-Coli AI Detector")
