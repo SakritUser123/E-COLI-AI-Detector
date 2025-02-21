@@ -38,7 +38,7 @@ if selected_tab == "E.Coli Detection":
         # Add inputs to the form
         name = st.text_input('Enter your name:')
         age = st.number_input('Enter your age:', min_value=0)
-        gender = st.selectbox('Select your gender:', ['Male', 'Female', 'Other'])
+        gender = st.selectbox('Select your gender:', ['Male', 'Female'])
     
     # Additional factors based on age and gender
         if age > 25 and gender == 'Female':
